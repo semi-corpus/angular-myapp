@@ -1,0 +1,72 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+/*  font-family: 'Open Sans', sans-serif; */
+
+/* Color Scheme Light : 
+
+*/
+
+/* Inherit Elements */
+*{transition:all .3s linear;}
+html {  
+  background: rgb(254,184,89);
+  background: -moz-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%);
+  background: linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#feb859",endColorstr="#ef4e8e",GradientType=1);
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+body { 
+  background:rgba(255,255,255,.1);
+  font-size:100%;
+  min-height:100%;
+}
+h1,h2,h3{font-family:;}
+h4,h5,h6 {font-family:;}
+a{color:;}
+nav img{margin:auto 15px;width:40px}
+nav ul{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  align-items: center;
+  height:80px;
+}
+/* Top Nav */
+.top-nav{
+  background:rgba(255,255,255,.2);
+  box-shadow:0 4px 10px -3px rgba(0,0,0,.05);
+  color:#FFFFFF;
+  font-family:;
+  height:80px;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:2;
+}
+#icon-menu{width:28px}
+/* Content */
+.app{
+  background:;
+  background-size:cover;
+  color:;
+  font-weight:300;
+  min-height:100vh;
+  height:100%;
+}
+/* Bottom Nav*/
+.bottom-nav{
+  background:rgba(255,255,255,.2);
+  box-shadow:0 4px 10px 3px rgba(0,0,0,.05);
+  height:80px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  z-index:2;
+}
+/* JS Triggered Classes */
+.hidden{visibility: hidden;}
+.visible{visibility: visible;}
+.displaynone{display: none;}
+.display{display: block;}

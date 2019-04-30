@@ -1,0 +1,20 @@
+<nav class="top-nav">
+  <ul>
+    <li><a><img src="assets/img/icons/icon-angular.png"></a></li>
+    <li><a><img src="assets/img/icons/icon-menu.png" id="icon-menu"></a></li>
+  </ul>
+</nav>
+
+<div class="app">
+  <app-create (taskCreated)="addTaskToList($event)"></app-create>
+  <app-nav-list [taskList]="tasklist"></app-nav-list>
+</div>
+
+<nav class="bottom-nav">
+  <ul>
+    <li><a href=""><img src="assets/img/icons/icon-emptyround.png"></a></li>
+    <li><a href=""><img src="assets/img/icons/icon-emptyround.png"></a></li>
+    <li><a href=""><img src="assets/img/icons/icon-emptyround.png"></a></li>
+    <li><a href=""><img src="assets/img/icons/icon-emptyround.png"></a></li>
+  </ul>
+</nav>

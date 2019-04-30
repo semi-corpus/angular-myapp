@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800')
+
+@import "sass/abstracts"
+
+*
+    transition: all .3s linear 
+
+html  
+    background: rgb(254,184,89) 
+    background: -moz-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
+    background: -webkit-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
+    background: linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#feb859",endColorstr="#ef4e8e",GradientType=1) 
+    background-attachment: fixed
+    scroll-behavior: smooth 
+    overflow-x: hidden 
+
+body 
+    background: rgba(255,255,255,.2)
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+    min-height: 100%
+
+h1, h2, h3 
+    color: grey
+    font-size: 18px
+    font-weight: 700
+
+h4, h5, h6 
+    font-size: 16px
+    font-weight: 600  
+
+a
+    color: rgb(218,197,243)
+    font-weight: 800
+
+nav img
+    margin: auto 15px
+    width: 40px 
+
+nav ul
+    @mixin flex()
+    height: 80px 
+ 
+.top-nav
+    background: rgba(245,136,174,.95) 
+    box-shadow: 0 4px 10px -3px rgba(0,0,0,.05)
+    color: white
+    font-family: 'Open Sans', sans-serif
+    height: 80px 
+    position: fixed 
+    top: 0 
+    width: 100% 
+    z-index: 2 
+ 
+    #icon-menu
+        width: 28px 
+
+.bottom-nav
+    background: rgba($color-primary, .95)
+    box-shadow: 0 -4px 10px 3px rgba(0,0,0,.05)
+    height: 80px
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    z-index: 2
+
+.app
+    margin-top: 80px
+    min-height: calc(100vh - 160px)
+    height: 100% 
+    padding: 20px 10px 80px 10px
+   
+.create-component
+    background: rgba(255,255,255,.1)
+    margin: 0 auto 20px auto
+    padding: 0 10px 5px 10px
+    text-align: center
+
+    h4
+        background: white
+        border-bottom-left-radius: 5em
+        border-bottom-right-radius: 5em
+        box-shadow: 0 4px 10px -3px rgba(0,0,0,.1)
+        font-weight: 900
+        margin: 0 auto
+        text-align: center
+        text-transform: uppercase
+        width: 300px
+
+    label
+        display: block
+        padding: 10px 0 2px 0
+
+    input
+        background: rgba(255,255,255,.3)
+        border: 1px solid rgba(255,255,255,.5)
+        border-radius: 4px
+        color: rgb(80,80,80)
+        display: block
+        height: 25px
+        margin: auto
+        padding: 2px 5px
+        width: 200px 
+
+    select
+        border-radius: 4px
+        color: black
+        padding: 4px
+        text-align: center 
+        width: 200px
+
+    button
+        background: white 
+        border: none
+        border-radius: 4px
+        box-shadow: 0 0 3px 3px rgba(255,255,255,.1)
+        display: block
+        font-weight: 700
+        padding: 4px 10px
+        margin: 15px auto 10px auto
+        width: 200px
+
+.displaynone
+    display: none
+
+.display
+    display: block

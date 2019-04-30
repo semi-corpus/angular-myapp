@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+* {
+  transition: all 0.3s linear;
+}
+
+html {
+  background: #feb859;
+  background: -moz-linear-gradient(0deg, #feb859 0%, #ef4e8e 100%);
+  background: -webkit-linear-gradient(0deg, #feb859 0%, #ef4e8e 100%);
+  background: linear-gradient(0deg, #feb859 0%, #ef4e8e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#feb859",endColorstr="#ef4e8e",GradientType=1);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: rgba(255, 255, 255, 0.1);
+  min-height: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+nav img {
+  margin: auto 15px;
+  width: 40px;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.top-nav {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#icon-menu {
+  width: 28px;
+}
+
+.app {
+  color: white;
+  font-weight: 300;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.bottom-nav {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.05);
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.displaynone {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

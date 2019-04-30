@@ -1,0 +1,13 @@
+<div class="component-container"  *ngFor="let task of taskList">
+  <img class="component-thumbnail" src="{{task.src}}">
+  <h1 class="component-name">{{ task.name }}</h1>   
+  <div class="component-detail" [ngClass]="'display'">
+    <a>
+      <small>Show Detail</small>
+      <img src="assets/img/icons/icon-showmore.png" class="component-icon_showmore">
+      <div class="component-lorem displaynone">{{task.details}}</div>
+    </a>
+  </div>
+  <app-detail [task]="task"></app-detail>
+  <p></p>
+</div>

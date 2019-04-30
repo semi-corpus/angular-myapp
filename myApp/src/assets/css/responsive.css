@@ -1,0 +1,11 @@
+/* < 1500 */ 
+@media only screen and (min-width: 1500px) {
+    .app{display:table;margin:auto;}
+    .component-container{display:inline-block;margin: 0 20px 20px 20px;width:500px;}
+    .create-component{margin:10px 30px 10px 30px;}
+    .create-component div{display:flex;flex-flow:row wrap;align-content: center;justify-content: space-around;padding:10px 10px 5px 10px}
+    .create-component label{color:#333;margin:5px 0 15px 0}
+    .create-component input, .create-component select{height:25px;margin:auto}
+    .create-component button{height:25px;margin-top:12px!important}
+    .create-component small{display:none}
+}
