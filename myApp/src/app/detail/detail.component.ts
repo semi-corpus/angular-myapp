@@ -4,7 +4,7 @@ import { Task } from '../task';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.sass']
+  styles: ['']
 })
 export class DetailComponent implements OnInit {
 

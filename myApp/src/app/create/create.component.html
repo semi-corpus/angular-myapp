@@ -1,8 +1,8 @@
 <form class="create-component" (ngSubmit)="addTask()">
-  <h4>Create a new form</h4>
+  <h4>Create a task</h4>
   <div>
     <label for="create[name]">Name :</label>
-    <input id="create[name]" name="name" [(ngModel)]="newTask.name">
+    <input id="create[name]" name="name" [(ngModel)]="newTask.name" #inputName="ngModel" required pattern="[a-zA-Z0-9_ -]*">
 
     <label for="create[deadline]">Deadline :</label>
     <input type="date" id="create[deadline]" name="deadline" [(ngModel)]="newTask.deadLine">  

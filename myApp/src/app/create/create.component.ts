@@ -4,7 +4,7 @@ import { Task } from '../task';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.sass']
+  styles: ['']
 })
 export class CreateComponent {
 

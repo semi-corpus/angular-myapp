@@ -4,7 +4,7 @@ import { Task } from '../task';
 @Component({
   selector: 'app-nav-list',
   templateUrl: './nav-list.component.html',
-  styleUrls: ['./nav-list.component.sass']
+  styles: []
 })
 export class NavListComponent implements OnInit {
 

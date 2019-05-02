@@ -10,6 +10,5 @@ export class Task {
     status: TaskStatus;
     deadLine: Date;
     details: string;
-    //constructor(public doer: string){}
 }
 
