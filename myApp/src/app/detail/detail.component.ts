@@ -1,18 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
+import { CurrentTaskService } from '../current-task.service';
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styles: ['']
 })
+
 export class DetailComponent implements OnInit {
 
-  @Input() task: Task
+  task = new Task()
 
-  constructor() { }
+  constructor(private currenttaskService: CurrentTaskService) { }
 
   ngOnInit() {
+    this.currenttaskService.getCurrentTask().subscribe(Task => this.task = task)
   }
 
 }

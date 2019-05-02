@@ -8,7 +8,7 @@
     <input type="date" id="create[deadline]" name="deadline" [(ngModel)]="newTask.deadLine">  
 
     <label for="create[src]">Thumbnail Source :</label>
-    <input id="create[src]" name="src" [(ngModel)]="newTask.src"><br>
+    <input class="thumbnail-src" id="create[src]" name="src" [(ngModel)]="newTask.src"><br>
     <small style="opacity:.5">ex: https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538__340.jpg</small>
 
     <label for="create[status]">Status :</label>
@@ -17,7 +17,6 @@
       <option value="Doing">Doing</option>
       <option value="Done">Done</option>
     </select>
-
-    <button>Create</button>
   </div>
+    <div class="create-submit"><button>Generate</button></div>
 </form>

@@ -15,8 +15,10 @@ export class AppComponent implements OnInit{
   constructor(public manager: TaskProviderService) {}
 
   ngOnInit(): void {
-    this.tasklist = this.manager.tasklist
-    this.currentTask = this.tasklist[0]
+    this.manager.getTasks().subscribe(tasklist =>{
+      this.tasklist = tasklist
+      this.currentTask = this.tasklist[0]
+    })
   }
   
   setCurrentTask(task: Task): void{

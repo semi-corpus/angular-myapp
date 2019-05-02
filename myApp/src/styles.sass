@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700') 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800')
 
-@import "sass/abstracts"
+$color-primary: #2d2e33
+
+/*@mixin flex()        
+    display: flex  
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-around
 
 *
     transition: all .3s linear 
 
 html  
-    background: rgb(254,184,89) 
-    background: -moz-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
-    background: -webkit-linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
-    background: linear-gradient(0deg, rgba(254,184,89,1) 0%, rgba(239,78,142,1) 100%) 
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#feb859",endColorstr="#ef4e8e",GradientType=1) 
-    background-attachment: fixed
+    background: #a0a7b3
     scroll-behavior: smooth 
     overflow-x: hidden 
 
 body 
-    background: rgba(255,255,255,.2)
     font-family: 'Open Sans', sans-serif
     font-weight: 400
     min-height: 100%
@@ -40,11 +40,14 @@ nav img
     width: 40px 
 
 nav ul
-    @mixin flex()
+    display: flex  
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
     height: 80px 
  
 .top-nav
-    background: rgba(245,136,174,.95) 
+    background: #333842
     box-shadow: 0 4px 10px -3px rgba(0,0,0,.05)
     color: white
     font-family: 'Open Sans', sans-serif
@@ -58,7 +61,7 @@ nav ul
         width: 28px 
 
 .bottom-nav
-    background: rgba($color-primary, .95)
+    background: #333842
     box-shadow: 0 -4px 10px 3px rgba(0,0,0,.05)
     height: 80px
     position: fixed
@@ -67,63 +70,165 @@ nav ul
     width: 100%
     z-index: 2
 
+    ul
+        justify-content: space-evenly
+
 .app
     margin-top: 80px
     min-height: calc(100vh - 160px)
     height: 100% 
-    padding: 20px 10px 80px 10px
+    text-align: center
+    width: 100%
+
    
 .create-component
-    background: rgba(255,255,255,.1)
-    border: 1px solid rgba(255,255,255,.6)
+    background: white
+    box-shadow: 0 4px 4px 2px rgba(255,255,255,.05)
     margin: 0 auto 20px auto
-    padding: 0 10px 5px 10px
-    text-align: center
+    padding: 0 60px
+
+    div
+        margin-top: 30px
+        padding: 0
 
     h4
         background: white
         border-bottom-left-radius: 5em
         border-bottom-right-radius: 5em
-        box-shadow: 0 4px 10px -3px rgba(0,0,0,.1)
+        box-shadow: 0 4px 10px -3px rgba(0,0,0,.2)
         font-weight: 900
-        margin: 0 auto
+        margin: 0 auto 10px auto
         text-align: center
         text-transform: uppercase
         width: 300px
 
     label
         display: block
+        color: rgb(80,80,80)
         padding: 10px 0 2px 0
 
     input
-        background: rgba(255,255,255,.3)
-        border: 1px solid rgba(255,255,255,.5)
+        background: rgba($color-primary, .05)
         border-radius: 4px
         color: rgb(80,80,80)
-        display: block
         height: 25px
-        margin: auto
+        margin: 12px 60px 12px -60px
         padding: 2px 5px
         width: 200px 
 
     select
+        background: rgba($color-primary, .05)
         border-radius: 4px
         color: black
+        margin: 12px 60px 12px -60px
         padding: 4px
         text-align: center 
         width: 200px
 
-    button
-        background: white
-        border: none
-        border-radius: 4px
-        box-shadow: 0 0 3px 3px rgba(255,255,255,.1)
-        cursor: pointer
+    .thumbnail-src
+        width: 500px
+
+    .create-submit
+        margin-top: 20px
         display: block
-        font-weight: 700
-        padding: 4px 10px
+        width: 100%
+
+        button
+            background: rgb(250,196,39)
+            border: none
+            border-top-left-radius: 5em
+            border-top-right-radius: 5em
+            box-shadow: 0 -2px 10px -3px rgba(0,0,0,.2)      
+            color: $color-primary      
+            cursor: pointer
+            display: block
+            font-size: 1.1em
+            font-weight: 700
+            height: 40px
+            padding: 8px 10px
+            letter-spacing: 1px
+            margin: 0 auto
+            text-transform: uppercase
+            width: 200px
+
+.component-container
+    background: $color-primary
+    border-radius: 8px
+    box-shadow: 0 0 4px 5px rgba(0,0,0,.05)
+    margin: 40px
+    min-height: 300px
+    padding: 0 0 10px 0
+    max-width: 500px
+    width: 90%
+    animation: vanishIn .4s
+
+    .component-name
+        background: #333842
+        color: white
+        border-bottom: 1px solid rgba(0,0,0,.1)
+        padding: 10px 10px 10px 10px
+    
+    .component-thumbnail
+        border-top-left-radius: 8px
+        border-top-right-radius: 8px
+        display: block
+        margin: 0 auto
+        max-width: 500px
+        width: 100% 
+
+    .component-detail  
+        margin: 10px auto
+        padding: 10px 0
+        text-align: center
+        
+        summary::-webkit-details-marker 
+            display: none
+
+        small        
+            background: #a0a7b3
+            border: 2px solid rgba(238,151,35,1)
+            border-radius: 100%
+            box-shadow: 0 0 4px 1px $color-primary
+            color: $color-primary
+            display: flex  
+            flex-flow: row nowrap
+            align-items: center
+            justify-content: space-around
+            font-size: 12px
+            font-weight: 400
+            height: 100px
+            margin: auto
+            width: 100px
+            animation: rotateIn 1s
+            
+        .component-icon_showmore
+            vertical-align: middle
+            width: 10px
+            animation: flash 8s infinite
+
+    .component-deadline
+        background: #333842
+        border-radius: 4px
+        color: white
+        font-weight: 600
+        margin: auto
+        padding: 5px 10px 5px 10px
+        text-align: center
+        width: 150px
+    
+    .component-status
+        background: rgb(250,196,39)
+        background: -moz-linear-gradient(45deg, rgba(250,196,39,.8) 0%, rgba(226,105,31,.8) 100%)
+        background: -webkit-linear-gradient(45deg, rgba(250,196,39,.8) 0%, rgba(226,105,31,.8) 100%)
+        background: linear-gradient(45deg, rgba(250,196,39,.8) 0%, rgba(226,105,31,.8) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fac427",endColorstr="#e2691f",GradientType=0.8)
+        border-radius: 8px
+        color: white
+        display: block
         margin: 15px auto 10px auto
-        width: 200px
+        padding: 10px 5%
+        text-align: center
+        width: 80%    
 
 .displaynone
     display: none

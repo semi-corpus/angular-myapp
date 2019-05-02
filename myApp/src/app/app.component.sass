@@ -1,7 +1,11 @@
 @import "../sass/abstracts"
 
 .component-container
-    background: rgba(255,255,255,.95)
+    background: rgb(250,196,39)
+    background: -moz-linear-gradient(0deg, rgba(250,196,39,1) 0%, rgba(226,105,31,1) 100%)
+    background: -webkit-linear-gradient(0deg, rgba(250,196,39,1) 0%, rgba(226,105,31,1) 100%)
+    background: linear-gradient(0deg, rgba(250,196,39,1) 0%, rgba(226,105,31,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fac427",endColorstr="#e2691f",GradientType=1)
     border-radius: 8px
     box-shadow: 0 0 4px 5px rgba(0,0,0,.05)
     margin: 0 auto 20px auto
@@ -29,7 +33,7 @@
         text-align: center
         
         summary::-webkit-details-marker 
-            display:none
+            display: none
 
         small        
             border: 1px solid rgba(127,127,127,.1)
