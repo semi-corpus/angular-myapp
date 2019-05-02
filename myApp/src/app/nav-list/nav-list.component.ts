@@ -1,17 +1,26 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
+import { TaskProviderService } from '../task-provider.service';
+import { CurrentTaskService } from '../current-task.service';
 
 @Component({
   selector: 'app-nav-list',
   templateUrl: './nav-list.component.html',
-  styles: []
+  styles: ['./nav-list.component.scss']
 })
 export class NavListComponent implements OnInit {
 
-  @Input() taskList: Array<Task>;
-  @Output() taskSelected = new EventEmitter<Task>();
+  taskList : Array<Task>
+  
+  constructor(
+    private provider: TaskProviderService,
+    private current: CurrentTaskService
+  ) { }
 
-  constructor() { }
-
-  ngOnInit() { }
+  ngOnInit() {
+    this.provider.getTasks().subscribe(tasks => this.taskList = tasks)
+  }
+  select(task: Task){
+    this.current.define(task)
+  }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Task, TaskStatus } from './task';
+import { Task } from './task';
 import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 
 
 @Injectable({
@@ -10,10 +10,24 @@ import { Observable } from 'rxjs';
 
 export class TaskProviderService {
 
-  constructor(private http: HttpClient){}
+  tasks = new Array<Task>()
+  tasksSubject = new ReplaySubject<Task[]>(1)
+
+  constructor(private http: HttpClient){
+    this.http.get<Task[]>('/assets/tasks.json')
+    .subscribe(tasks => {
+      this.tasks = tasks
+      this.tasksSubject.next(this.tasks)
+    })
+  }
 
   getTasks(): Observable<Task[]>{
-    return this.http.get<Task[]>('/assets/tasks.json')
+    return this.tasksSubject.asObservable()
+  }
+
+  add(newTask: Task){
+    this.tasks.unshift(newTask)
+    this.tasksSubject.next(this.tasks)
   }
 
 }

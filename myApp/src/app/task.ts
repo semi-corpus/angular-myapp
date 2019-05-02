@@ -1,7 +1,7 @@
 export enum TaskStatus {
-    ToDo,
-    Doing,
-    Done
+    ToDo = 'To Start',
+    Doing = 'Doing',
+    Done = 'Done'
 }
 
 export class Task {
@@ -11,4 +11,3 @@ export class Task {
     deadLine: Date;
     details: string;
 }
-

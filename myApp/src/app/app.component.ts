@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Task } from './task';
-import { TaskProviderService } from './task-provider.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +6,5 @@ import { TaskProviderService } from './task-provider.service';
   styleUrls: ['./app.component.sass']
 })
 
-export class AppComponent implements OnInit{
-  tasklist: Array<Task>  = []
-  currentTask: Task
-
-  constructor(public manager: TaskProviderService) {}
-
-  ngOnInit(): void {
-    this.manager.getTasks().subscribe(tasklist =>{
-      this.tasklist = tasklist
-      this.currentTask = this.tasklist[0]
-    })
-  }
-  
-  setCurrentTask(task: Task): void{
-    this.currentTask = task;
-  }
-  addTaskToList(task: Task): void{
-    this.tasklist.unshift(task);
-    this.currentTask = task;
-  }
+export class AppComponent{
 }
